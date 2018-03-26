@@ -4,6 +4,9 @@ var cacheNameTest = 'my-test-cache-v1'
 var ENV = 'development'
 
 self.addEventListener('install', (e) => {
+  if (ENV === 'development') {
+    self.skipWaiting()
+  }
   e.waitUntil(
     caches.open(cacheNameTest).then((cache) => {
       return cache.addAll([
@@ -15,9 +18,6 @@ self.addEventListener('install', (e) => {
       console.log(error)
     })
   )
-  if (ENV === 'development') {
-    self.skipWaiting()
-  }
 })
 
 self.addEventListener('active', (e) => {

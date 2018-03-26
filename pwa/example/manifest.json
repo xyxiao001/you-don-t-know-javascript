@@ -1,0 +1,13 @@
+{
+  "display": "fullscreen",
+  "short_name": "echo",
+  "name": "echo",
+  "icon": [
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "200x200"
+    }
+  ],
+  "start_url": "index.html"
+}
