@@ -1,16 +1,11 @@
 <template>
     <div id="app">
         <v-app>
-            <app-header
+            <!-- <app-header
                 class="app-shell-header"
                 @click-menu="handleClickHeaderMenu"
                 @click-back="handleClickHeaderBack">
-            </app-header>
-            <app-sidebar
-                @hide-sidebar = "handleHideSidebar"
-                @show-sidebar = "handleShowSidebar"
-            >
-            </app-sidebar>
+            </app-header> -->
             <transition
                 :name="pageTransitionEffect"
                 @before-enter="handleBeforeEnter"
@@ -97,6 +92,7 @@ export default {
 <style lang="stylus">
 @import '~@/assets/stylus/variable'
 #app
+    position relative
     font-family 'Avenir', Helvetica, Arial, sans-serif
     -webkit-font-smoothing antialiased
     -moz-osx-font-smoothing grayscale
@@ -117,7 +113,7 @@ export default {
             background transparent
 
         &.app-view-with-header
-            top $app-header-height
+            // top $app-header-height
 
         &.transition-slide
             transition transform 0.4s cubic-bezier(.55, 0, .1, 1)

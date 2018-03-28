@@ -7,7 +7,7 @@
 /* globals WorkboxSW */
 
 const workboxSW = new WorkboxSW({
-    cacheId: 'lavas-cache',
+    cacheId: 'echo-cache',
     ignoreUrlParametersMatching: [/^utm_/],
     skipWaiting: true,
     clientsClaim: true
@@ -16,6 +16,12 @@ const workboxSW = new WorkboxSW({
 // Define precache injection point.
 workboxSW.precache([]);
 
+// 缓存appshell
+workboxSW.router.registerNavigationRoute('/appshell');
+
+// 缓存请求
+workboxSW.router.registerRoute(new RegExp('https://query\.yahooapis\.com/v1/public/yql'),
+workboxSW.strategies.networkFirst());
 /**
  * example runningCache with api
  */

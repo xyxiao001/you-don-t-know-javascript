@@ -1,15 +1,21 @@
 <template>
   <div>
-    <div class="content">
-      <div>
-        <h2>echo</h2>
+    <pull>
+      <div class="content">
+        <div>
+          <h2 v-for="(item, index) in 15">echo {{item}}</h2>
+        </div>
       </div>
-    </div>
+    </pull>
+    <app-footer-nav></app-footer-nav>
   </div>
 </template>
 
 <script>
-import {mapActions} from 'vuex';
+import {mapActions} from 'vuex'
+import AppFooterNav from '../components/AppfooterNav'
+import Pull from '../components/Pull'
+
 function setState(store) {
     store.dispatch('appShell/appHeader/setAppHeader', {
         show: true,
@@ -41,6 +47,10 @@ export default {
     },
     activated() {
         setState(this.$store);
+    },
+    components: {
+      AppFooterNav: AppFooterNav,
+      Pull: Pull
     }
 };
 </script>
@@ -48,9 +58,9 @@ export default {
 <style lang="stylus" scoped>
 .content
     display flex
-    align-items center
+    // align-items center
     justify-content center
-    height 100%
+    padding-bottom: 60px;
     flex-wrap wrap
     h2
         font-size 46px
