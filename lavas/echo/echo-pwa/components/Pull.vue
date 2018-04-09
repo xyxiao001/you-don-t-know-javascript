@@ -80,6 +80,7 @@ export default {
       return this.$refs.scroll.scrollTop === 0
     },
     start (e) {
+      e.preventDefault()
       this.time = 0
       if (!this.getCanScroll() || this.pull || this.loading) {
         return false
@@ -93,9 +94,6 @@ export default {
     },
     move (e) {
       this.nowY = e.touches[0].clientY
-      if (this.change === 0) {
-        e.preventDefault()
-      }
       this.current = this.change
     },
     end () {
@@ -121,13 +119,13 @@ export default {
 
 <style lang="stylus" scoped>
   .pull-wrapper
-    display: flex
-    flex-direction: column
+    position: relative;
     height: 100%
-    background: #f6f6f6;
+    background: #f6f6f6
 
     .scroll-containet
-      flex: 1
+      position: relative
+      height: 100%
       overflow-y: auto
       -webkit-overflow-scrolling: touch
       background-color: white

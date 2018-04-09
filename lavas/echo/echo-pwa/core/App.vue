@@ -1,34 +1,6 @@
 <template>
     <div id="app">
-        <v-app>
-            <!-- <app-header
-                class="app-shell-header"
-                @click-menu="handleClickHeaderMenu"
-                @click-back="handleClickHeaderBack">
-            </app-header> -->
-            <transition
-                :name="pageTransitionEffect"
-                @before-enter="handleBeforeEnter"
-                @after-enter="handleAfterEnter">
-                <div>
-                    <keep-alive>
-                        <router-view
-                            :key="$route.fullPath"
-                            v-if="$route.meta.keepAlive"
-                            class="app-view"
-                            :class="[{'app-view-with-header': appHeaderShow}, pageTransitionClass]"
-                            ></router-view>
-                    </keep-alive>
-                    <router-view
-                        :key="$route.fullPath"
-                        v-if="!$route.meta.keepAlive"
-                        class="app-view"
-                        :class="[{'app-view-with-header': appHeaderShow}, pageTransitionClass]"
-                        ></router-view>
-                </div>
-            </transition>
-            <update-toast></update-toast>
-        </v-app>
+      <router-view></router-view>
     </div>
 </template>
 
@@ -98,57 +70,4 @@ export default {
     -moz-osx-font-smoothing grayscale
     text-align center
     color #2c3e50
-    
-    .app-view
-        position absolute
-        top 0
-        right 0
-        bottom 0
-        left 0
-        overflow-x hidden
-        overflow-y auto
-
-        &::-webkit-scrollbar
-            width 0
-            background transparent
-
-        &.app-view-with-header
-            // top $app-header-height
-
-        &.transition-slide
-            transition transform 0.4s cubic-bezier(.55, 0, .1, 1)
-
-            &.slide-left-enter
-                transform translate(100%, 0)
-
-            &.slide-right-enter
-                transform translate(-100%, 0)
-
-            &.slide-right-leave-active
-                transform translate(100%, 0)
-
-            &.slide-left-leave-active
-                transform translate(-100%, 0)
-
-        &.transition-fade
-            opacity 1
-            transition opacity 1s ease
-
-            &.fade-enter
-                opacity 0
-
-            &.fade-leave-active
-                opacity 0
-
-        // &.transition-slide-fade
-        //     &.slide-fade-enter-active
-        //         transition: all .3s ease
-        //
-        //     &.slide-fade-leave-active
-        //         transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0)
-        //
-        //     &.slide-fade-enter,
-        //     &.slide-fade-leave-to
-        //         transform: translateX(10px)
-        //         opacity: 0
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrapper">
     <pull>
       <div class="content">
         <div>
@@ -56,12 +56,18 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.wrapper {
+  position: relative;
+  height: 100%;
+}
+
 .content
     display flex
     // align-items center
     justify-content center
-    padding-bottom: 60px;
+    padding-bottom: 60px
     flex-wrap wrap
+    box-sizing: border-box;
     h2
         font-size 46px
         font-weight 500
