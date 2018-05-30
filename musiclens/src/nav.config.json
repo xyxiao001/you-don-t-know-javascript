@@ -1,0 +1,203 @@
+{
+  "zh": [
+    {
+      "name": "首页",
+      "path": "/",
+      "component": "Home"
+    },
+    {
+      "name": "产品",
+      "path": "/product",
+      "component": "Product"
+    },
+    {
+      "name": "产品2",
+      "path": "/product",
+      "component": "Product",
+      "children": [
+        {
+          "name": "产品总览",
+          "path": "/product/overview"
+        },
+        {
+          "name": "材质造型",
+          "path": "/product/style"
+        },
+        {
+          "name": "创新科技",
+          "path": "/product/innovation"
+        },
+        {
+          "name": "安全性能",
+          "path": "/product/safe"
+        },
+        {
+          "name": "服务礼遇",
+          "path": "/product/service"
+        },
+        {
+          "name": "使用场景",
+          "path": "/product/usage"
+        },
+        {
+          "name": "常见问题",
+          "path": "/product/faq"
+        }
+      ]
+    },
+    {
+      "name": "购买",
+      "path": "/Purchase",
+      "component": "Buy"
+    },
+    {
+      "name": "新闻",
+      "path": "/news",
+      "component": "News"
+    },
+    {
+      "name": "关于",
+      "path": "/about",
+      "component": "About"
+    },
+    {
+      "name": "常见问题",
+      "path": "/faq",
+      "component": "Problem"
+    }
+  ],
+  "en": [
+    {
+      "name": "Home",
+      "path": "/",
+      "component": "Home"
+    },
+    {
+      "name": "Product",
+      "path": "/product",
+      "component": "Product"
+    },
+    {
+      "name": "Product2",
+      "path": "/product",
+      "component": "Product",
+      "children": [
+        {
+          "name": "overview",
+          "path": "/product/overview"
+        },
+        {
+          "name": "Material & Style",
+          "path": "/product/style"
+        },
+        {
+          "name": "Innovation",
+          "path": "/product/innovation"
+        },
+        {
+          "name": "Safety Performance",
+          "path": "/product/safe"
+        },
+        {
+          "name": "Service & Gift",
+          "path": "/product/service"
+        },
+        {
+          "name": "Usage Scene",
+          "path": "/product/usage"
+        },
+        {
+          "name": "FAQ",
+          "path": "/product/faq"
+        }
+      ]
+    },
+    {
+      "name": "Buy",
+      "path": "/Purchase",
+      "component": "Buy"
+    },
+    {
+      "name": "News",
+      "path": "/news",
+      "component": "News"
+    },
+    {
+      "name": "About",
+      "path": "/about",
+      "component": "About"
+    },
+    {
+      "name": "FAQ",
+      "path": "/faq",
+      "component": "Problem"
+    }
+  ],
+  "ja": [
+    {
+      "name": "ホーム",
+      "path": "/",
+      "component": "Home"
+    },
+    {
+      "name": "商品",
+      "path": "/product",
+      "component": "Product"
+    },
+    {
+      "name": "商品2",
+      "path": "/product",
+      "component": "Product",
+      "children": [
+        {
+          "name": "概要",
+          "path": "/product/overview"
+        },
+        {
+          "name": "材料形状",
+          "path": "/product/style"
+        },
+        {
+          "name": "イノベーションとテクノロジー",
+          "path": "/product/innovation"
+        },
+        {
+          "name": "安全性能ja",
+          "path": "/product/safe"
+        },
+        {
+          "name": "サービスの礼儀",
+          "path": "/product/service"
+        },
+        {
+          "name": "シーンを使用する",
+          "path": "/product/usage"
+        },
+        {
+          "name": "よくある質問",
+          "path": "/product/faq"
+        }
+      ]
+    },
+    {
+      "name": "購入",
+      "path": "/Purchase",
+      "component": "Buy"
+    },
+    {
+      "name": "ニュース",
+      "path": "/news",
+      "component": "News"
+    },
+    {
+      "name": "お問い合わせ",
+      "path": "/about",
+      "component": "About"
+    },
+    {
+      "name": "よくある質問",
+      "path": "/faq",
+      "component": "Problem"
+    }
+  ]
+}
