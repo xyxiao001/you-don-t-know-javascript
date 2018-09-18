@@ -2,13 +2,20 @@ import { message } from './message.js';
 
 console.log(message);
 
-const btn = document.querySelector('#btn');
+const add = document.querySelector('#add');
+
+const reduce = document.querySelector('#reduce');
 
 const num = document.querySelector('#num');
 
-let id = 0
+let id = 0;
 
-btn.addEventListener('click', () => {
-  id += 1
-  num.innerHTML = id
-})
+add.addEventListener('click', () => {
+  id += 1;
+  num.innerHTML = id;
+});
+
+reduce.addEventListener('click', () => {
+  id -= 1;
+  num.innerHTML = id;
+});

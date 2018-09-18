@@ -20,14 +20,21 @@ var _message = require("./message.js");
 
 console.log(_message.message);
 
-var btn = document.querySelector('#btn');
+var add = document.querySelector('#add');
+
+var reduce = document.querySelector('#reduce');
 
 var num = document.querySelector('#num');
 
 var id = 0;
 
-btn.addEventListener('click', function () {
+add.addEventListener('click', function () {
   id += 1;
+  num.innerHTML = id;
+});
+
+reduce.addEventListener('click', function () {
+  id -= 1;
   num.innerHTML = id;
 });
       },
